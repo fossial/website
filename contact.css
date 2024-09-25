@@ -1,0 +1,254 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #0a0a0a;
+    color: white;
+}
+
+/* Reduced Size Fixed Navbar */
+.futuristic-navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 30px; 
+    background-color: rgba(0, 0, 0, 0.8);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    border-bottom: 2px solid rgba(0, 255, 255, 0.5);
+    height: 60px; 
+}
+
+.futuristic-navbar .logo img {
+    width: 60px; 
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+/* Rotate logo on hover */
+.futuristic-navbar .logo img:hover {
+    transform: rotate(360deg);
+}
+
+.futuristic-navbar nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.futuristic-navbar nav ul li {
+    margin-left: 20px;
+}
+
+.futuristic-navbar nav ul li a {
+    text-decoration: none;
+    color: rgba(0, 255, 255, 0.8);
+    font-size: 16px; 
+    padding: 8px 16px; 
+    transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.futuristic-navbar nav ul li a:hover {
+    color: #fff;
+    background-color: rgba(0, 255, 255, 0.2);
+    border-radius: 4px;
+}
+
+/* Contact Us Section */
+.contact-us-section {
+    background-image: url('image/contactus.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+}
+
+.contact-us-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(5px);
+    z-index: -1;
+}
+
+.contact-us-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in;
+}
+
+.contact-us-section h2 {
+    font-size: 32px;
+    color: #00ffff;
+    margin-bottom: 20px;
+}
+
+.contact-us-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.contact-us-section form .form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.contact-us-section form .form-group label {
+    display: block;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.contact-us-section form .form-group input,
+.contact-us-section form .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us-section form .form-group input:focus,
+.contact-us-section form .form-group textarea:focus {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.contact-us-section button {
+    padding: 12px 30px;
+    border: none;
+    background-color: #00ffff;
+    color: #000;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us-section button:hover {
+    background-color: #00bbbb;
+}
+
+/* Footer Section */
+footer {
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-align: center;
+    border-top: 2px solid rgba(0, 255, 255, 0.5);
+    position: relative;
+}
+
+.footer-links a {
+    color: rgba(0, 255, 255, 0.7);
+    text-decoration: none;
+    margin: 0 15px;
+}
+
+.footer-links a:hover {
+    color: #fff;
+}
+
+footer p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+.branding-watermark {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(0, 255, 255, 0.1);
+    font-size: 12px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+/* Contact Us Section with Blurred Background and Reduced Transparency */
+.contact-us-section {
+    background-image: url('image/contactus.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0;
+    text-align: center;
+    position: relative;
+}
+
+.contact-us-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7); 
+    backdrop-filter: blur(10px); 
+    z-index: -1;
+}
+
+.contact-us-section .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    animation: fadeIn 2s ease-in;
+}
+
+.contact-us-section h2 {
+    font-size: 32px;
+    color: #00ffff;
+    margin-bottom: 20px;
+}
+
+.contact-us-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+/* Form elements remain unchanged */
+.contact-us-section form .form-group input,
+.contact-us-section form .form-group textarea {
+    background-color: rgba(255, 255, 255, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.contact-us-section button {
+    background-color: #00ffff;
+    transition: background-color 0.3s ease;
+}
+
+.contact-us-section button:hover {
+    background-color: #00bbbb;
+}
